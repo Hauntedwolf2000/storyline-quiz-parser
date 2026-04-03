@@ -582,8 +582,7 @@ async function handleFileSelect(file) {
   });
 
   const quizSlides = slideRefs.filter(s =>
-    !['Intro','Outro','End','QUIZ RESULTS'].includes(s.title) &&
-    s.title.match(/^Q\d+$|question/i)
+     !['intro', 'outro', 'end', 'quiz results'].includes(s.title.toLowerCase())
   );
 
   const allSlides = [];
